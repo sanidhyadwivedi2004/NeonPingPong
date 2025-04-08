@@ -1,0 +1,101 @@
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#gameContainer {
+    margin-top: 5vmin;
+    text-align: center;
+}
+
+#gameBoard {
+    background-color: #0f3460;
+    border: 3px solid #e94560;
+    box-shadow: 0 0 20px #e94560;
+    border-radius: 15px;
+}
+
+#scoreText {
+    font-size: 80px;
+    color: #ffffff;
+    text-shadow: 2px 2px #e94560;
+    margin: 20px 0;
+}
+
+#resetBtn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e94560, #0f3460);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #e94560;
+}
+
+#resetBtn:hover {
+    background: linear-gradient(90deg, #0f3460, #e94560);
+    box-shadow: 0 0 20px #e94560;
+}
+
+#victoryScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 52, 96, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    z-index: 999;
+}
+
+#victoryScreen.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#victoryMessage {
+    font-size: 64px;
+    color: #e94560;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 30px;
+    animation: popIn 1s ease;
+}
+
+#playAgainBtn {
+    font-size: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #00adb5, #ff2e63);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px #e94560;
+    transition: transform 0.2s;
+}
+
+#playAgainBtn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
